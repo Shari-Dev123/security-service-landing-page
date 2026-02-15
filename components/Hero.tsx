@@ -60,13 +60,13 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className="w-full max-md:pl-2 bg-cover bg-center bg-[#F8B178]/5" style={{
+        <div className="w-full max-md:pl-2 h-[120vh] bg-cover bg-center bg-[#F8B178]/5" style={{
           backgroundImage: "url('/assets/new/bg-2-cropped.svg')",
         }}>
             <section
                 id="home"
                 ref={heroRef}
-                className="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center px-5 overflow-visible bg-cover bg-center"
+                className="relative h-[120vh] min-h-[700px] w-full flex flex-col items-center justify-center text-center px-5 overflow-visible bg-cover bg-center"
                 style={{
                     clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0% 90%)',
                     WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 53.5% 90%, 50% 95.5%, 46% 90%, 0% 90%)'
@@ -91,7 +91,7 @@ export const Hero = () => {
                     className="absolute left-0 top-1/2 -translate-y-1/2 z-20"
                 >
                     <Image 
-                        src="/assets/white-logo-cropped.svg" 
+                        src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg" 
                         alt="Logo" 
                         width={500} 
                         height={250} 

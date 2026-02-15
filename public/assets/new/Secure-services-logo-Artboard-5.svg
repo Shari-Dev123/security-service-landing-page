@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <defs>
+    <style>
+      .b {
+        font-size: 24.66px;
+      }
+
+      .b, .c, .d {
+        fill: #fff;
+      }
+
+      .b, .d {
+        font-family: AgencyFB-Reg, 'Agency FB';
+      }
+
+      .d {
+        font-size: 12px;
+        letter-spacing: .09em;
+      }
+    </style>
+  </defs>
+  <text class="d" transform="translate(111.14 252.91)"><tspan x="0" y="0">YOUR SAFETY - OUR PRIORITY</tspan></text>
+  <text class="b" transform="translate(110.84 237.85)"><tspan x="0" y="0">SECURE SERVICES</tspan></text>
+  <g>
+    <path class="c" d="M204.65,166.99l9.39-9.39-10.06-10.06-10.16,10.16-2.71,29.42c-.18,1.95-.94,3.59-2.28,4.92l-10.77,10.77,6.51,6.51,15.78-15.78,2.03-21.5c.18-2.03.94-3.71,2.28-5.05Z"/>
+    <path class="c" d="M157.25,187.65c-.01-1.28.49-2.43,1.49-3.43l12.22-12.22,4.28,4.28-11.85,11.85,10.06,10.06,11.85-11.85.03.03,2.71-28.68c.18-2.03.94-3.71,2.28-5.05l9.75-9.75c1-1,2.15-1.5,3.43-1.49.29,0,.58.04.86.09l-22.75-22.75-46.77,46.77,22.44,22.44c0-.1-.03-.2-.03-.3Z"/>
+    <polygon class="c" points="218.66 162.22 208.09 172.78 206.77 187.11 225.16 168.72 218.66 162.22"/>
+  </g>
+</svg>

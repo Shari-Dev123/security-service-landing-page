@@ -50,7 +50,7 @@ const servicesData: Service[] = [
         id: '04',
         title: 'MOBILE PATROLS',
         description: 'OUR MOBILE PATROL SECURITY SERVICES INCLUDE REGULAR INSPECTIONS OF ACCESS POINTS, PERIMETER FENCING, LIGHTING, AND INTERNAL/EXTERNAL AREAS. WITH RAPID ALARM RESPONSE AND SIA LICENSED OFFICERS, WE PROVIDE RELIABLE 24/7 PROTECTION ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/new/CAR-WITH-LOGO.svg',
+        imageUrl: '/assets/new/CAR-WITH-LOGO.png',
         ctaText: 'Analyze Growth',
         ctaLink: '/services/analytics',
     },

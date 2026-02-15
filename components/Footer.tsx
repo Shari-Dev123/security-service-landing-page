@@ -20,7 +20,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center lg:items-start space-y-4">
             <div className="relative w-56 h-56">
               <Image
-                src="/assets/white-logo-cropped.svg"
+                src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
                 alt="Secure Services Logo"
                 fill
                 className="object-contain"
@@ -51,7 +51,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center lg:items-end space-y-8">
-            <button className="bg-white text-navy-dark font-agency text-lg xl:text-2xl px-8 py-2 rounded-full tracking-widest hover:bg-[#E9A07D] hover:text-white transition-all duration-300 uppercase">
+            <button className="bg-white lg:ml-1 text-navy-dark font-agency text-lg xl:text-2xl px-8 py-2 rounded-full tracking-widest hover:bg-[#E9A07D] hover:text-white transition-all duration-300 uppercase">
               <a href="tel:+447519300050">Get In Touch</a>
             </button>
 
