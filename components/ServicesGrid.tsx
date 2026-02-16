@@ -58,7 +58,7 @@ const servicesData: Service[] = [
         id: '05',
         title: 'KEY HOLDINGS',
         description: 'OUR PROFESSIONAL KEY HOLDING SECURITY SERVICES PROVIDE SECURE KEY MANAGEMENT AND FAST ALARM RESPONSE FOR COMMERCIAL PROPERTIES, OFFICES, RETAIL PREMISES, AND CONSTRUCTION SITES. WITH 24/7 SUPPORT FROM SIA-LICENSED SECURITY OFFICERS, WE DELIVER RELIABLE KEY HOLDING AND EMERGENCY RESPONSE SERVICES ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/BUILDING_WITH_LOGO.png',
+        imageUrl: '/assets/new/building-logo-1.png',
         ctaText: 'Start Building',
         ctaLink: '/services/product',
     },
