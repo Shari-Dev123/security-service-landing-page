@@ -90,74 +90,47 @@ export const Excellence = () => {
   }, []);
 
   return (
-    <section id="services" className="h-full  relative overflow-visible">
-      <div className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none " style={{ backgroundImage: "url('/assets/top-side.png')" }}></div>
+    <section 
+  id="services" 
+  /* 1. Ensure the section is the 'anchor' for everything */
+  className="relative min-h-screen w-full overflow-visible bg-cover bg-center bg-no-repeat" 
+  style={{ backgroundImage: "url('/assets/new/bg-1-cropped.svg')" }}
+>
+  {/* 2. THE OVERLAY: This is now a sibling to the content, not a parent. 
+      This ensures it applies evenly to the entire background space. */}
+  <div className="absolute inset-0 bg-[#EED7C8]/25 z-0" />
+
+  {/* 3. THE CONTENT WRAPPER: Everything inside here will be ON TOP of the bg and overlay */}
   <div
     ref={sectionRef}
-    className="relative z-10 bg-[#F8B178]/15 py-20 w-full max-w-full mx-auto bg-no-repeat bg-cover overflow-visible"
-    style={{ 
-    //   clipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
-    // WebkitClipPath: 'polygon(0% 0%, 100% 0%, 100% 90%, 55% 90%, 50% 96%, 45% 90%, 0% 90%)',
-      backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
-    }}
+    className="relative bg-[#EED7C8]/25  py-10 px-8 sm:px-16 lg:px-20 max-w-7xl mx-auto"
   >
-    {/* Background Watermark */}
-    <div
-      className="absolute top-0 left-0 z-0 bg-contain opacity-10 pointer-events-none"
-      style={{
-        backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
-        backgroundSize: "180%",
-        backgroundPosition: "0% 0%",
-      }}
-    />
+    {/* Section Header - Now it will look identical to the grid below it */}
+    <h2 className="font-agency opacity-100  w-full font-extralight text-3xl sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
+      Our Commitment to Excellence
+    </h2>
+    
 
-    <div className="relative z-10 flex flex-col px-8 sm:px-16 lg:px-20 pb-24">
-      {/* Section Header: Hierarchy Level 1 */}
-      <h2 className="font-agency font-extralight text-3xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#151E33] text-center mb-24 tracking-tight lg:text-nowrap leading-none uppercase">
-        Our Commitment to Excellence
-      </h2>
-
-      <div className="grid lg:grid-cols-3 gap-10 lg:gap-20 items-stretch">
-        {/* Left Side: Text Container */}
-        <div className="lg:col-span-2 space-y-12 lg:space-y-16">
-          {features.map((feature) => (
-            <div key={feature.title} className="feature-item opacity-0">
-              {/* Feature Title: Hierarchy Level 2 (Scaled down for readability) */}
-              <h3 className="font-agency text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#151E33] mb-3 leading-tight uppercase tracking-tight font-bold">
-                {feature.title}
-              </h3>
-              {/* Description: Hierarchy Level 3 */}
-              <p className="font-montserrat text-[#151E33]/80 text-base lg:text-lg xl:text-xl font-medium leading-relaxed max-w-2xl">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Right Side: Image Container (Stretches to match text height) */}
-        <div className="lg:col-span-1 hidden lg:block">
-          <div 
-            ref={imageRef} 
-            className="relative w-full h-full border-[12px] border-white shadow-2xl opacity-0"
-          >
-            <Image
-              src="/assets/excellence.jpg"
-              alt="Security Guard"
-              fill
-              className="object-cover"
-              priority
-            />
+    <div className="grid lg:grid-cols-3 gap-10 lg:gap-20 items-stretch">
+      {/* Left Side: Text Container */}
+      <div className="lg:col-span-2 space-y-12">
+        {features.map((feature) => (
+          /* Change opacity-0 to opacity-100 to test if they appear */
+          <div key={feature.title} className="feature-item opacity-100">
+            <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
+              {feature.title}
+            </h3>
+            <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
+              {feature.description}
+            </p>
           </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Mobile Image: Balanced Aspect Ratio */}
-        <div className="lg:hidden relative w-full aspect-[4/5] border-[8px] mb-10 border-white shadow-lg">
-          <Image
-            src="/assets/excellence.jpg"
-            alt="Security Guard"
-            fill
-            className="object-cover"
-          />
+      {/* Right Side: Image */}
+      <div className="lg:col-span-1 hidden lg:block">
+        <div className="relative w-full h-full min-h-[400px] border-[12px] border-white shadow-2xl">
+          <Image src="/assets/excellence.jpg" alt="Security" fill className="object-cover" priority />
         </div>
       </div>
     </div>

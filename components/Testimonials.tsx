@@ -114,18 +114,24 @@ export const Testimonials = () => {
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
-    <div className="relative lg:-mb-5">
-      <div className="bg-[#F8B178]/15 absolute inset-0 h-[40%]"></div>
+    <div className="relative lg:-mb-5 bg-[#EED7C8]/5" style={{
+                  backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
+
+      }}>
+      <div style={{
+                  backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
+
+      }} className="bg-cover bg-center bg-[#F8B178]/17 absolute inset-0 h-[40%]"></div>
 
       <section
         id="testimonials"
         ref={sectionRef}
         style={{
-          clipPath: 'polygon(0% 0%, 44.5% 0%, 50% 6%, 55.5% 0%, 100% 0%, 100% 90%, 55.5% 90%, 50% 95%, 44.5% 90%, 0% 90%)',
+          clipPath: 'polygon(0% 0%, 44.5% 0%, 50% 6%, 55.5% 0%, 100% 0%, 100% 90%, 55.9% 90%, 50% 95%, 44.1% 90%, 0% 90%)',
           WebkitClipPath: 'polygon(0% 0%, 44.5% 0%, 50% 6%, 55.5% 0%, 100% 0%, 100% 90%, 55.5% 90%, 50% 95%, 44.5% 90%, 0% 90%)',
           backgroundImage: "url('/assets/removed-cut.svg')",
         }}
-        className="z-60 pb-24 py-32 pb-40 px-6 relative bg-no-repeat bg-cover bg-center overflow-visible"
+        className="z-60 pb-24 py-32 pb-40 px-6 relative  bg-cover bg-center overflow-visible"
       >
         <div className="max-w-7xl max-lg:my-10 mx-auto">
           <h2 className="font-agency lg:px-30 text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">
@@ -133,7 +139,7 @@ export const Testimonials = () => {
           </h2>
 
           <div className="relative flex items-center justify-center gap-4 lg:gap-16">
-            <button 
+            <button
               onClick={handlePrev}
               className="hidden lg:block text-white/50 hover:text-white hover:scale-110 transition-all duration-300"
             >
@@ -183,7 +189,7 @@ export const Testimonials = () => {
               ))}
             </div>
 
-            <button 
+            <button
               onClick={handleNext}
               className="hidden lg:block text-white/50 hover:text-white hover:scale-110 transition-all duration-300"
             >
@@ -197,11 +203,10 @@ export const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'w-8 bg-white' 
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                    ? 'w-8 bg-white'
                     : 'w-2 bg-white/40 hover:bg-white/60'
-                }`}
+                  }`}
               />
             ))}
           </div>

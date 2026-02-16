@@ -59,7 +59,7 @@ html {
 
 
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -68,7 +68,7 @@ h6 {
   font-family: var(--font-agency);
   font-weight: 400;
   text-transform: uppercase;
-}
+} */
 
 .font-agency {
   font-family: var(--font-agency);

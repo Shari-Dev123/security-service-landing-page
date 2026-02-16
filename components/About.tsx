@@ -18,7 +18,7 @@ export default function About() {
       <div className="absolute inset-0 z-100 flex items-center justify-center pointer-events-none">
         <div className="relative w-[120%] h-[120%] opacity-[0.19]">
           <Image
-            src="/assets/SVG_Asset-11.svg"
+            src="/assets/SVG_Asset-11-cropped.svg"
             alt="Logo Watermark"
             fill
             className="object-contain"

@@ -60,7 +60,7 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className="w-full max-md:pl-2 h-[120vh] bg-cover bg-center bg-[#F8B178]/5" style={{
+        <div className="w-full max-md:pl-2 h-[120vh] bg-cover bg-center bg-[#EED7C8]/25" style={{
           backgroundImage: "url('/assets/new/bg-2-cropped.svg')",
         }}>
             <section

@@ -38,7 +38,10 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 py-24 lg:py-32 px-6 overflow-hidden">
+    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 py-24 lg:py-32 px-6 overflow-hidden"
+    style={{
+      
+    }}>
       {/* GEOMETRIC BACKGROUND */}
       
       {/* <div className="absolute inset-0 bg-geometric-pattern opacity-30 pointer-events-none"></div> */}
@@ -53,7 +56,7 @@ export const ContactSection = () => {
         </div>
       </div>
       {/* TOP NOTCH TRANSITION FROM TESTIMONIALS */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-[#fdfbf9] z-10"></div>
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[50px] border-t-[#fdfbf9] z-10"></div> */}
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">

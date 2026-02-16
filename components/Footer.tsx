@@ -3,17 +3,22 @@
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
-export const Footer = () => {
+interface FooterProps {
+  home?: any;
+  services?: any;
+  about?: any;
+}
+
+export const Footer = ({ home, services, about }: FooterProps) => {
   return (
-    <div className=" bg-cover  relative z-10 bg-center  bg-no-repeat overflow-visible" style={{
+    <div className={` bg-cover  relative z-10 bg-center ${home ?"-mt-14":''}  bg-no-repeat overflow-visible`} style={{
       // backgroundImage: "url('/assets/removed-cut.svg')",
+      clipPath:home? 'polygon(0% 0%, 44.5% 0%, 50% 12%, 55.5% 0%, 100% 0%, 100% 100%, 0% 100%)':"",
+      WebkitClipPath:home? 'polygon(0% 0%, 44.3% 0%, 50% 12%, 55.7% 0%, 100% 0%, 100% 100%, 0% 100%)':"",
     }}>
 
-      <footer style={{backgroundImage: "url('/assets/removed-cut.svg')"}} className="relative z-10  bg-center bg-cover bg-no-repeat opacity-90 pt-20 pb-12 px-6 overflow-visible">
+      <footer style={{ backgroundImage: "url('/assets/removed-cut.svg')" }} className="relative z-10  bg-center bg-cover bg-no-repeat opacity-90 pt-20 pb-12 px-6 overflow-visible">
         <div className="absolute inset-0 opacity-50 pointer-events-none"></div>
-
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40"></div>
-        <div className="absolute top-0 left-1/2 bg-transparent -translate-x-1/2 w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-t-[40px] border-t-white z-10"></div>
 
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center text-center lg:text-left">
 
@@ -58,19 +63,19 @@ export const Footer = () => {
             <div className="flex gap-4">
               {[
                 { Icon: "/assets/facebook-svgrepo.svg", link: "https://www.facebook.com/" },
-              { Icon: "/assets/instagram-svgrepo.svg", link: "https://www.instagram.com/ss_secureservices?igsh=MTh4ZDAxZ2ZsN2twaw%3D%3D" },
-              { Icon: "/assets/linkedin-svgrepo-1.svg", link: "https://www.linkedin.com/" },
-              { Icon: "/assets/mail-svgrepo.svg", link: "mailto:nas@secureservicesltd.co.uk" },
-            ].map((social, i) => (
-                  <a
-                    key={i}
-                    href={social.link}
-                    target="_blank"
-                className="w-10 h-10 rounded-full border border-white bg-white flex items-center justify-center text-white hover:bg-gray-200  hover:text-gray-700 transition-all"
-                  >
-                <Image src={social?.Icon} alt="Icon" width={24} height={24} className="hover:cursor-pointer" />
-                  </a>
-            ))}
+                { Icon: "/assets/instagram-svgrepo.svg", link: "https://www.instagram.com/ss_secureservices?igsh=MTh4ZDAxZ2ZsN2twaw%3D%3D" },
+                { Icon: "/assets/linkedin-svgrepo-1.svg", link: "https://www.linkedin.com/" },
+                { Icon: "/assets/mail-svgrepo.svg", link: "mailto:nas@secureservicesltd.co.uk" },
+              ].map((social, i) => (
+                <a
+                  key={i}
+                  href={social.link}
+                  target="_blank"
+                  className="w-10 h-10 rounded-full border border-white bg-white flex items-center justify-center text-white hover:bg-gray-200  hover:text-gray-700 transition-all"
+                >
+                  <Image src={social?.Icon} alt="Icon" width={24} height={24} className="hover:cursor-pointer" />
+                </a>
+              ))}
             </div>
           </div>
         </div>

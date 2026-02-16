@@ -22,7 +22,7 @@ export default function Home() {
       {/* <TrustExperience/> */}
       <Testimonials />
       {/* <ContactSection /> */}
-      <Footer />
+      <Footer home={true} />
       <Chatbot />
     </main>
   );
