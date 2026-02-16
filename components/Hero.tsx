@@ -91,7 +91,7 @@ export const Hero = () => {
             width={500}
             height={250}
             priority
-            className="lg:w-[500px] w-[240px] lg:h-[50vh] h-[40vh] object-contain"
+            className="lg:w-[500px] max-md:w-[150px] max-md:h-[150px] w-[240px] lg:h-[50vh] h-[40vh] object-contain"
           />
         }
           
