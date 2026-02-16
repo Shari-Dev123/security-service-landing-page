@@ -16,7 +16,7 @@ export const ContactSection = () => {
     if (!formRef.current) return;
 
     setIsSubmitting(true);
-    
+
     emailjs
       .sendForm(
         "SERVICE_ID",
@@ -38,12 +38,12 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 py-24 lg:py-32 px-6 overflow-hidden"
-    style={{
-      
-    }}>
+    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 max-lg:border-b-2 max-lg:border-b-white py-24 lg:py-32 px-6 overflow-hidden"
+      style={{
+
+      }}>
       {/* GEOMETRIC BACKGROUND */}
-      
+
       {/* <div className="absolute inset-0 bg-geometric-pattern opacity-30 pointer-events-none"></div> */}
       <div className="absolute inset-0 z-100 flex items-center justify-center pointer-events-none">
         <div className="relative w-[120%] h-[120%] opacity-[0.09]">
@@ -69,7 +69,7 @@ export const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-0 items-stretch">
-          
+
           <div className="lg:col-span-2 relative min-h-[400px] lg:min-h-full border-[10px] border-white shadow-2xl overflow-hidden group">
             <iframe
               title="Office Location"
@@ -124,14 +124,12 @@ export const ContactSection = () => {
                 <button
                   type="button"
                   onClick={() => setShowSIAField(!showSIAField)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    showSIAField ? 'bg-[#2E3350]' : 'bg-gray-300'
-                  }`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${showSIAField ? 'bg-[#2E3350]' : 'bg-gray-300'
+                    }`}
                 >
                   <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      showSIAField ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${showSIAField ? 'translate-x-6' : 'translate-x-1'
+                      }`}
                   />
                 </button>
                 <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">

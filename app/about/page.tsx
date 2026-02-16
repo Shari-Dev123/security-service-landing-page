@@ -9,11 +9,11 @@ const AboutPage = () => {
         <main className="min-h-screen flex flex-col relative">
             <Navbar />
             {/* <div className="pt-20 h-[100vh]"> */}
-                {/* <AboutUs /> */}
-                <About/>
-                <ContactSection/>
+            {/* <AboutUs /> */}
+            <About />
+            <ContactSection />
             {/* </div> */}
-            <Footer />
+            <Footer about={true} />
         </main>
     )
 }

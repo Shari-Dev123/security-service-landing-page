@@ -74,7 +74,7 @@ const servicesData: Service[] = [
 
 export default function ServicesGrid() {
     return (
-        <section id="services" className="w-full pt-20 pb-10 bg-[#ECEDF0] -mt-5 -mb-8">
+        <section id="services" className="w-full pt-20 pb-10 bg-[#ECEDF0] -mt-5 -mb-8 max-lg:border-t-2 max-lg:border-b-2 max-lg:border-white">
             <div className="max-w-[1920px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-dense auto-rows-fr">
                     {servicesData.map((service, index) => {

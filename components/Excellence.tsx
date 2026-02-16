@@ -35,9 +35,8 @@ export const Excellence = () => {
       // Title Animation
       gsap.fromTo(
         "h2",
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 1,
           ease: "power3.out",
@@ -90,51 +89,54 @@ export const Excellence = () => {
   }, []);
 
   return (
-    <section 
-  id="services" 
-  /* 1. Ensure the section is the 'anchor' for everything */
-  className="relative min-h-screen w-full overflow-visible bg-cover bg-center bg-no-repeat" 
-  style={{ backgroundImage: "url('/assets/new/bg-1-cropped.svg')" }}
->
-  {/* 2. THE OVERLAY: This is now a sibling to the content, not a parent. 
+    <section
+      id="services"
+      /* 1. Ensure the section is the 'anchor' for everything */
+      className="relative min-h-screen bg-[#EED7C8]/45 w-full overflow-visible bg-cover bg-center bg-no-repeat max-lg:border-t-2 max-lg:border-b-2 max-lg:border-white py-32 lg:py-10 px-8 sm:px-16 lg:px-20"
+    >
+      {/* 2. THE OVERLAY: This is now a sibling to the content, not a parent. 
       This ensures it applies evenly to the entire background space. */}
-  <div className="absolute inset-0 bg-[#EED7C8]/25 z-0" />
+      <div
+        className="absolute inset-0 opacity-50 bg-no-repeat z-0 bg-left
+             bg-[length:30%] 
+             max-md:bg-[length:60%]"
+        style={{ backgroundImage: "url('/assets/new/excellence-bg.svg')" }} />
 
-  {/* 3. THE CONTENT WRAPPER: Everything inside here will be ON TOP of the bg and overlay */}
-  <div
-    ref={sectionRef}
-    className="relative bg-[#EED7C8]/25  py-10 px-8 sm:px-16 lg:px-20 max-w-7xl mx-auto"
-  >
-    {/* Section Header - Now it will look identical to the grid below it */}
-    <h2 className="font-agency opacity-100  w-full font-extralight text-3xl sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
-      Our Commitment to Excellence
-    </h2>
-    
+      {/* 3. THE CONTENT WRAPPER: Everything inside here will be ON TOP of the bg and overlay */}
+      <div
+        ref={sectionRef}
+        className="relative z-10 max-w-7xl mx-auto"
+      >
+        {/* Section Header - Now it will look identical to the grid below it */}
+        <h2 className="font-agency w-full font-extralight text-3xl sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
+          Our Commitment to Excellence
+        </h2>
 
-    <div className="grid lg:grid-cols-3 gap-10 lg:gap-20 items-stretch">
-      {/* Left Side: Text Container */}
-      <div className="lg:col-span-2 space-y-12">
-        {features.map((feature) => (
-          /* Change opacity-0 to opacity-100 to test if they appear */
-          <div key={feature.title} className="feature-item opacity-100">
-            <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
-              {feature.title}
-            </h3>
-            <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
-              {feature.description}
-            </p>
+
+        <div className="grid lg:grid-cols-3 gap-10 w-full lg:gap-20 items-stretch">
+          {/* Left Side: Text Container */}
+          <div className="lg:col-span-2 space-y-12">
+            {features.map((feature) => (
+              /* Change opacity-0 to opacity-100 to test if they appear */
+              <div key={feature.title} className="feature-item">
+                <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
+                  {feature.title}
+                </h3>
+                <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Right Side: Image */}
-      <div className="lg:col-span-1 hidden lg:block">
-        <div className="relative w-full h-full min-h-[400px] border-[12px] border-white shadow-2xl">
-          <Image src="/assets/excellence.jpg" alt="Security" fill className="object-cover" priority />
+          {/* Right Side: Image */}
+          <div className="lg:col-span-1 hidden lg:block">
+            <div className="relative w-full h-full min-h-[400px] border-[12px] border-white shadow-2xl">
+              <Image src="/assets/excellence.jpg" alt="Security" fill className="object-cover" priority />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   );
 };

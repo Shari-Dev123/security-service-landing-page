@@ -5,9 +5,9 @@ import { Footer } from '@/components/Footer'
 const page = () => {
   return (
     <>
-    <Navbar/>
-    <ServicesGrid/>
-    <Footer/>
+      <Navbar />
+      <ServicesGrid />
+      <Footer services={true} />
     </>
   )
 }

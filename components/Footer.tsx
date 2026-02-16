@@ -4,18 +4,16 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 interface FooterProps {
-  home?: any;
-  services?: any;
-  about?: any;
+  home?: boolean;
+  services?: boolean;
+  about?: boolean;
 }
 
 export const Footer = ({ home, services, about }: FooterProps) => {
   return (
-    <div className={` bg-cover  relative z-10 bg-center ${home ?"-mt-14":''}  bg-no-repeat overflow-visible`} style={{
-      // backgroundImage: "url('/assets/removed-cut.svg')",
-      clipPath:home? 'polygon(0% 0%, 44.5% 0%, 50% 12%, 55.5% 0%, 100% 0%, 100% 100%, 0% 100%)':"",
-      WebkitClipPath:home? 'polygon(0% 0%, 44.3% 0%, 50% 12%, 55.7% 0%, 100% 0%, 100% 100%, 0% 100%)':"",
-    }}>
+    <div className={`bg-cover relative z-10 bg-center ${home ? "-mt-14" : ''} bg-no-repeat overflow-visible border-t-2 border-white ${home ? 'lg:[clip-path:polygon(0%_0%,44.5%_0%,50%_12%,55.5%_0%,100%_0%,100%_100%,0%_100%)]' : ''}`}>
+
+
 
       <footer style={{ backgroundImage: "url('/assets/removed-cut.svg')" }} className="relative z-10  bg-center bg-cover bg-no-repeat opacity-90 pt-20 pb-12 px-6 overflow-visible">
         <div className="absolute inset-0 opacity-50 pointer-events-none"></div>
