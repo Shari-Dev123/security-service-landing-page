@@ -19,20 +19,29 @@ export const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "SERVICE_ID",
-        "TEMPLATE_ID",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current,
-        "PUBLIC_KEY"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
         () => {
           setStatus("success");
           setIsSubmitting(false);
           formRef.current?.reset();
+          setShowSIAField(false);
+          // Reset status after 5 seconds
+          setTimeout(() => {
+            setStatus("idle");
+          }, 5000);
         },
         () => {
           setStatus("error");
           setIsSubmitting(false);
+          // Reset status after 5 seconds
+          setTimeout(() => {
+            setStatus("idle");
+          }, 5000);
         }
       );
   };
