@@ -121,7 +121,7 @@ export const Testimonials = () => {
       <div style={{
         backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
 
-      }} className="bg-cover bg-center bg-[#F8B178]/20 opacity-75 absolute inset-0 h-[50%]"></div>
+      }} className="bg-cover bg-center bg-[#F8B178]/20 opacity-75 absolute inset-0 top-0 overflow-hidden h-[70%]"></div>
 
       <section
         id="testimonials"

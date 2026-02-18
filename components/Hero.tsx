@@ -68,7 +68,7 @@ export const Hero = () => {
       <section
         id="home"
         ref={heroRef}
-        className="relative h-[120vh] min-h-[700px] w-full flex flex-col items-center justify-center text-center px-5 overflow-visible bg-cover bg-center max-lg:border-b-2 max-lg:border-white lg:[clip-path:polygon(0%_0%,100%_0%,100%_90%,55%_90%,50%_100%,45%_90%,0%_90%)]"
+        className="relative h-[120vh] min-h-[700px] w-full flex flex-col items-center justify-center text-center px-5 overflow-visible bg-cover bg-center max-lg:border-b-2 max-lg:border-white lg:[clip-path:polygon(0%_0%,44.5%_0%,50%_6.6%,55.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
       >
         {/* Background Images with Fade Transition */}
         {heroImages.map((img, index) => (
@@ -81,26 +81,26 @@ export const Hero = () => {
               zIndex: currentImageIndex === index ? 1 : 0,
             }}
           >
-          <div
-          ref={logoRef}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20"
-        >{
-          index!==1 && index!==2 && <Image
-            src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
-            alt="Logo"
-            width={500}
-            height={250}
-            priority
-            className="lg:w-[500px] max-md:w-[150px] max-md:h-[150px] w-[240px] lg:h-[50vh] h-[40vh] object-contain"
-          />
-        }
-          
-        </div>
-        </div>
+            <div
+              ref={logoRef}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20"
+            >{
+                index !== 1 && index !== 2 && <Image
+                  src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+                  alt="Logo"
+                  width={500}
+                  height={250}
+                  priority
+                  className="lg:w-[500px] max-md:w-[150px] max-md:h-[150px] w-[240px] lg:h-[50vh] h-[40vh] object-contain"
+                />
+              }
+
+            </div>
+          </div>
         ))}
 
         {/* LOGO CONTAINER */}
-        
+
       </section>
     </div>
   );
