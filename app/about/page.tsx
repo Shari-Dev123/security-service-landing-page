@@ -3,6 +3,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import About from '@/components/About'
 import { ContactSection } from '@/components/ContactSection'
+import { Chatbot } from '@/components/Chatbot'
 
 const AboutPage = () => {
     return (
@@ -14,6 +15,7 @@ const AboutPage = () => {
             <ContactSection />
             {/* </div> */}
             <Footer about={true} />
+            <Chatbot />
         </main>
     )
 }

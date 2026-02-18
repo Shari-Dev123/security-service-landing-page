@@ -15,23 +15,23 @@ export default function About() {
             </div>
 
             {/* Logo Watermark */}
-            <div className="absolute inset-0 z-100 flex items-center justify-center pointer-events-none">
-                <div className="relative w-[120%] h-[120%] opacity-[0.19]">
+            {/* <div className="absolute inset-0 z-100 flex items-center justify-center pointer-events-none"> */}
+                <div className="absolute -top-36 left-20 z-100 w-[100%] h-[100%] opacity-[0.19]">
                     <Image
                         src="/assets/SVG_Asset-11-cropped.svg"
                         alt="Logo Watermark"
                         fill
-                        className="object-contain"
+                        className="object-cover "
                     />
                 </div>
-            </div>
+            {/* </div> */}
 
             {/* Main Content Container */}
             <div className="relative ml-8 z-20 grid grid-cols-1 md:grid-cols-2 w-full min-h-screen">
                 {/* Left Column: Text with Semi-Transparent Overlay */}
                 <div className="bg-white/70 backdrop-blur-sm p-8 md:p-16 flex flex-col justify-center text-[#151E33]">
-                    <h1 className="font-agency text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-tight mb-8">
-                        professional security company covering the uk
+                    <h1 className="font-agency text-3xl md:text-4xl lg:text-4xl text-nowrap font-bold uppercase leading-tight mb-8">
+                        professional security company <br /> covering the uk
                     </h1>
 
                     <div className="font-montserrat space-y-6 text-sm md:text-base leading-relaxed max-w-xl">
