@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 interface FooterProps {
   home?: boolean;
@@ -21,14 +20,13 @@ export const Footer = ({ home, services, about }: FooterProps) => {
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center text-center lg:text-left">
 
           <div className="flex flex-col items-center lg:items-start space-y-4">
-            <div className="relative w-56 h-56">
-              <Image
-                src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
-                alt="Secure Services Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <Image
+              src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+              alt="Secure Services Logo"
+              width={500}
+              height={500}
+              className="w-auto h-auto max-w-[130px] max-h-[130px] sm:max-w-[160px] sm:max-h-[160px] lg:max-w-[224px] lg:max-h-[224px] object-contain"
+            />
           </div>
 
           <div className="flex flex-col items-center space-y-6">

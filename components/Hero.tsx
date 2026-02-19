@@ -119,10 +119,10 @@ export const Hero = () => {
                 <Image
                   src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
                   alt="Logo"
-                  width={500}
-                  height={250}
+                  width={0}
+                  height={0}
                   priority={index === 0}
-                  className="object-contain w-[160px] h-[130px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"
+                  className="object-contain w-[140px] h-[120px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"
                 />
               )}
 
