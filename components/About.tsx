@@ -27,10 +27,10 @@ export default function About() {
             {/* </div> */}
 
             {/* Main Content Container */}
-            <div className="relative ml-8 z-20 grid grid-cols-1 md:grid-cols-2 w-full min-h-screen">
+            <div className="relative md:ml-8 z-20 grid grid-cols-1 md:grid-cols-2 w-full min-h-screen">
                 {/* Left Column: Text with Semi-Transparent Overlay */}
-                <div className="bg-white/70 backdrop-blur-sm p-8 md:p-16 flex flex-col justify-center text-[#151E33]">
-                    <h1 className="font-agency text-3xl md:text-4xl lg:text-4xl text-nowrap font-bold uppercase leading-tight mb-8">
+                <div className="bg-white/70 backdrop-blur-sm py-8 px-4 md:p-16 flex flex-col justify-center text-[#151E33]">
+                    <h1 className="font-agency text-3xl md:text-4xl lg:text-4xl md:text-nowrap font-bold uppercase leading-tight mb-8">
                         professional security company <br /> covering the uk
                     </h1>
 

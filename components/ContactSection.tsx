@@ -173,7 +173,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#2E3350] text-white font-agency text-2xl py-5 flex items-center justify-center gap-3 hover:bg-[#E9A07D] transition-all group disabled:opacity-50 tracking-[0.2em]"
+                className="w-full bg-[#2E3350] text-white font-agency md:text-2xl py-5 flex items-center justify-center gap-3 hover:bg-[#E9A07D] transition-all group disabled:opacity-50 tracking-[0.2em]"
               >
                 {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
                 <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
