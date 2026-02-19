@@ -60,9 +60,9 @@ export const Footer = ({ home, services, about }: FooterProps) => {
 
             <div className="flex gap-4">
               {[
-                { Icon: "/assets/facebook-svgrepo.svg", link: "https://www.facebook.com/" },
+                { Icon: "/assets/facebook-svgrepo.svg", link: "https://www.facebook.com/profile.php?id=61588384584179" },
                 { Icon: "/assets/instagram-svgrepo.svg", link: "https://www.instagram.com/ss_secureservices?igsh=MTh4ZDAxZ2ZsN2twaw%3D%3D" },
-                { Icon: "/assets/linkedin-svgrepo-1.svg", link: "https://www.linkedin.com/" },
+                { Icon: "/assets/linkedin-svgrepo-1.svg", link: "https://www.linkedin.com/in/secure-services-4b22aa3b0" },
                 { Icon: "/assets/mail-svgrepo.svg", link: "mailto:nas@secureservicesltd.co.uk" },
               ].map((social, i) => (
                 <a

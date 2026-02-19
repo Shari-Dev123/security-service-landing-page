@@ -4,18 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const heroImages = [
   "/assets/hero-bg.jpg",
-  "/assets/new/hero-bg-6.svg",
-  "/assets/new/hero-bg-7.svg",
-  "/assets/security-guard-workspace-2.jpg",
+  "/assets/new/hero-image-2.jpg",
+  "/assets/new/hero-image-3.jpg",
+  "/assets/new/hero-image-4.jpg",
   "/assets/security-guard-workspace.jpg",
   "/assets/service-6.jpg",
   "/assets/service-3.jpg",
   "/assets/about-us.jpg",
+  "/assets/excellence.jpg",
 ];
 
 export const Hero = () => {
@@ -85,7 +87,7 @@ export const Hero = () => {
               ref={logoRef}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-20"
             >{
-                index !== 1 && index !== 2 && <Image
+                index !== 1 && index !== 2 && (<Image
                   src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
                   alt="Logo"
                   width={500}
@@ -93,8 +95,37 @@ export const Hero = () => {
                   priority
                   className="lg:w-[500px] max-md:w-[150px] max-md:h-[150px] w-[240px] lg:h-[50vh] h-[40vh] object-contain"
                 />
-              }
+              )}
 
+              {(index === 1 || index === 2) && (
+                <div className="flex relative left-10 flex-col items-start gap-3 pl-8 lg:pl-12">
+                  <h2
+                    className="text-white text-start lg:4xl xl:text-6xl font-agency font-light text-nowrap uppercase leading-snug tracking-wide"
+                    style={{
+                      // fontFamily: "'Arial Black', 'Impact', sans-serif",
+                      // fontSize: "clamp(1.8rem, 4vw, 3.2rem)",
+                      textShadow: "2px 2px 8px rgba(0,0,0,0.5)",
+                      // maxWidth: "520px",
+                    }}
+                  >
+                    Over 15 Years of<br />
+                    Proven Security<br />
+                    Expertise
+                  </h2>
+                  <Link
+                    href="/about"
+                    className=" font-agency text-lg px-3 bg-[#E9A07D] py-1.5 rounded-full uppercase tracking-widest transition-all duration-300 hover:bg-[#E9A07D]/90 hover:text-white"
+                    style={{
+                      // backgroundColor: "#E8C49A",
+                      color: "#1a1a1a",
+                      // fontSize: "0.7rem",
+                      letterSpacing: "0.1em",
+                    }}
+                  >
+                    Read More
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         ))}
