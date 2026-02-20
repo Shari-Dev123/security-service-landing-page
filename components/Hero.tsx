@@ -11,11 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const heroImages = [
   "/assets/hero-bg.jpg",
   "/assets/new/hero-image-2.jpg",
-  "/assets/new/hero-image-3.jpg",
-  "/assets/new/hero-image-4.jpg",
+  "/assets/new/hero-bg-7.jpeg",
+  "/assets/new/hero-bg-66.png",
+  "/assets/new/hero-bg-5.jpeg",
+  "/assets/new/hero-bg-9.png",
+  // "/assets/new/hero-image-88.jpg",
   "/assets/security-guard-workspace.jpg",
-  "/assets/service-6.jpg",
-  "/assets/service-3.jpg",
+  // "/assets/service-6.jpg",
+  "/assets/new/hero-bg-10.jpeg",
   "/assets/about-us.jpg",
   "/assets/excellence.jpg",
 ];
@@ -63,11 +66,11 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full h-[100svh] lg:h-[120vh] md:bg-cover bg-[#EED7C8]/45">
+    <div className="w-full h-[100svh] pt-18 lg:h-[120vh] bg-contain">
       <section
         id="home"
         ref={heroRef}
-        className="relative h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden [clip-path:polygon(0%_0%,44.5%_0%,50%_6.6%,55.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
+        className="relative  z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden [clip-path:polygon(0%_0%,44.5%_0%,50%_0.0%,59.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
       >
         {/* Background Images with Fade Transition */}
         {heroImages.map((img, index) => (
@@ -103,7 +106,7 @@ export const Hero = () => {
 
               {/* Tablet and up: bg-cover */}
               <div
-                className="absolute inset-0 bg-cover bg-center hidden sm:block"
+                className="absolute inset-0 bg-no-repeat bg-contain h-full w-full bg-center hidden sm:block"
                 style={{
                   backgroundImage: `linear-gradient(rgba(10, 11, 16, 0.4), rgba(10, 11, 16, 0.4)), url("${img}")`,
                 }}
@@ -151,7 +154,7 @@ export const Hero = () => {
         ))}
 
         {/* Dot indicators — visible on mobile/tablet only */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 lg:hidden">
+        <div className="absolute lg:bottom-24 bottom-16 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
           {heroImages.map((_, i) => (
             <button
               key={i}

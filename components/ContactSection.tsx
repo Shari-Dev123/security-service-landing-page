@@ -117,16 +117,23 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">Subject</label>
-                <input
-                  type="text"
-                  name="subject"
-                  required
-                  className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent text-[#2E3350]"
-                  placeholder="SECURITY CONSULTATION"
-                />
-              </div>
+              {/* Subject */}
+<div className="space-y-2">
+  <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">
+    Subject
+  </label>
+  <input
+    type="text"
+    name="subject"
+    required
+    className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent text-[#2E3350]"
+    placeholder={
+      showSIAField
+        ? "APPLICATION FOR SECURITY OFFICER POSITION"
+        : "SECURITY CONSULTATION"
+    }
+  />
+</div>
 
               {/* Toggle for SIA Number */}
               <div className="flex items-center gap-3">
@@ -147,28 +154,38 @@ export const ContactSection = () => {
               </div>
 
               {/* SIA Number Field (conditionally rendered) */}
-              {showSIAField && (
-                <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
-                  <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">SIA Number</label>
-                  <input
-                    type="text"
-                    name="sia_number"
-                    className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent text-[#2E3350]"
-                    placeholder="ENTER YOUR SIA NUMBER"
-                  />
-                </div>
-              )}
+              {/* SIA Number Field */}
+{showSIAField && (
+  <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+    <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">
+      SIA Number
+    </label>
+    <input
+      type="text"
+      name="sia_number"
+      className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent text-[#2E3350]"
+      placeholder="E.G. 1234567890123456"
+    />
+  </div>
+)}
 
-              <div className="space-y-2">
-                <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">Message</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={4}
-                  className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent resize-none text-[#2E3350]"
-                  placeholder="HOW CAN WE HELP YOU?"
-                />
-              </div>
+             {/* Message */}
+<div className="space-y-2">
+  <label className="font-agency text-sm text-[#2E3350] tracking-widest uppercase font-bold">
+    Message
+  </label>
+  <textarea
+    name="message"
+    required
+    rows={4}
+    className="w-full border-b-2 border-gray-200 focus:border-[#2E3350] outline-none py-2 font-montserrat transition-colors bg-transparent resize-none text-[#2E3350]"
+    placeholder={
+      showSIAField
+        ? "I AM APPLYING FOR THE SECURITY OFFICER ROLE. I HAVE VALID SIA LICENSE AND EXPERIENCE IN..."
+        : "HOW CAN WE HELP YOU?"
+    }
+  />
+</div>
 
               <button
                 type="submit"

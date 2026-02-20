@@ -83,7 +83,7 @@ export const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 px-6 sm:px-12 flex items-center justify-between h-16",
+          "fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 px-6 sm:px-12 flex items-center justify-between h-18",
           isScrolled || isMenuOpen ? "bg-white shadow-md" : "bg-white border-b border-gray-100"
         )}
       >
