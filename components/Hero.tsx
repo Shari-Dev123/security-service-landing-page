@@ -121,13 +121,13 @@ export const Hero = () => {
                 />
               </div>
 
-              {/* Logo / Content overlay — vertically centered, left-aligned with padding */}
+              {/* Logo / Content overlay — vertically centered, left-aligned with refined padding and sizing */}
               <div
                 ref={index === 0 ? logoRef : undefined}
-                className="absolute z-20 top-1/2 -translate-y-1/2 left-0 flex flex-col items-start px-4 sm:px-8 md:px-10 lg:px-12"
+                className="absolute z-20 top-[45%] -translate-y-[45%] sm:top-1/2 sm:-translate-y-1/2 left-0 flex flex-col items-start pl-6 sm:pl-10 md:pl-12 lg:pl-16"
               >
                 {index !== 1 && index !== 2 && (
-                  <div className="relative w-[140px] sm:w-[210px] md:w-[260px] lg:w-[500px] h-auto max-w-[90vw]">
+                  <div className="relative w-[120px] sm:w-[180px] md:w-[240px] lg:w-[380px] h-auto max-w-[85vw] max-h-[40vh]">
                     <Image
                       src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
                       alt="Logo"
@@ -171,8 +171,8 @@ export const Hero = () => {
               key={i}
               onClick={() => setCurrentImageIndex(i)}
               className={`rounded-full transition-all duration-300 ${i === currentImageIndex
-                  ? "w-4 h-2 bg-[#E9A07D]"
-                  : "w-2 h-2 bg-white/40"
+                ? "w-4 h-2 bg-[#E9A07D]"
+                : "w-2 h-2 bg-white/40"
                 }`}
             />
           ))}
