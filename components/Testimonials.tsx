@@ -114,14 +114,14 @@ export const Testimonials = () => {
   const visibleTestimonials = getVisibleTestimonials();
 
   return (
-    <div className="relative lg:-mb-5 " style={{
+    <div className="relative border-b-4 border-white" style={{
       // backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
 
     }}>
-      <div style={{
-        backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
+      {/* <div style={{
+        // backgroundImage: "url('/assets/new/bg-1-cropped.svg')",
 
-      }} className="bg-cover bg-center bg-[#F8B178]/20 opacity-75 absolute inset-0 top-0 overflow-hidden h-[70%]"></div>
+      // }} className="bg-cover bg-center bg-[#F8B178]/20 opacity-75 absolute inset-0 top-0 overflow-hidden h-[70%]"></div> */}
 
       <section
         id="testimonials"
@@ -129,7 +129,7 @@ export const Testimonials = () => {
         style={{
           backgroundImage: "url('/assets/removed-cut.svg')",
         }}
-        className="z-60 pb-24 py-32 pb-40 px-6 relative bg-cover bg-center overflow-visible max-lg:border-t-2 max-lg:border-b-2 max-lg:border-white lg:[clip-path:polygon(0%_0%,44.5%_0%,50%_6%,55.5%_0%,100%_0%,100%_90%,55.9%_90%,50%_95%,44.1%_90%,0%_90%)]"
+        className="z-60 pb-24 py-32 pb-40 px-6 relative bg-cover bg-center overflow-visible border-t-2 border-b-0 border-white"
       >
         <div className="max-w-7xl max-lg:my-10 mx-auto">
           <h2 className="font-agency lg:px-30 text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">

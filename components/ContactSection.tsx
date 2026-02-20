@@ -47,7 +47,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-6 max-lg:border-b-2 max-lg:border-b-white py-24 lg:py-32 px-6 overflow-hidden"
+    <section id="contact" className="relative bg-[#151E33]/90 mb-1 border-t-white border-t-4 border-b-0 border-b-white py-24 lg:py-32 px-6 overflow-hidden"
       style={{
 
       }}>

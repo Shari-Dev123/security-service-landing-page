@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
     return (
-        <section className="relative min-h-screen mt-10 mb-0 w-full flex items-center overflow-hidden max-lg:border-t-2 max-lg:border-b-2 max-lg:border-white">
+        <section className="relative min-h-screen mt-10 mb-0 w-full flex items-center overflow-hidden border-t-2 border-b-0 border-white">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image

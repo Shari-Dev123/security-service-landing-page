@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer = ({ home, services, about }: FooterProps) => {
   return (
-    <div className={`bg-cover relative z-10 bg-center ${home ? "-mt-14" : ''} bg-no-repeat overflow-visible border-t-2 border-white ${home ? 'lg:[clip-path:polygon(0%_0%,44.5%_0%,50%_12%,55.5%_0%,100%_0%,100%_100%,0%_100%)]' : ''}`}>
+    <div className={`bg-cover relative z-10 bg-center ${home ? "-mt-14" : ''} bg-no-repeat overflow-visible border-t-0 border-white ${home ? '' : ''}`}>
 
 
 
