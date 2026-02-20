@@ -63,11 +63,11 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full h-[100svh] lg:h-[120vh] md:bg-cover md:bg-[#EED7C8]/45 bg-[#0a0b10]">
+    <div className="w-full h-[100svh] lg:h-[120vh] md:bg-cover bg-[#EED7C8]/45">
       <section
         id="home"
         ref={heroRef}
-        className="relative h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden lg:[clip-path:polygon(0%_0%,44.5%_0%,50%_6.6%,55.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
+        className="relative h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden [clip-path:polygon(0%_0%,44.5%_0%,50%_6.6%,55.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
       >
         {/* Background Images with Fade Transition */}
         {heroImages.map((img, index) => (
