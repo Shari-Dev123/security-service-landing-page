@@ -122,44 +122,41 @@ export const Hero = () => {
               </div>
 
               {/* Logo / Content overlay — vertically centered, left-aligned with refined padding and sizing */}
-              <div
-                ref={index === 0 ? logoRef : undefined}
-                className="absolute z-20 top-[45%] -translate-y-[45%] sm:top-1/2 sm:-translate-y-1/2 left-0 flex flex-col items-start pl-6 sm:pl-10 md:pl-12 lg:pl-16"
-              >
-                {index !== 1 && index !== 2 && (
-                  <div className="relative w-[120px] sm:w-[180px] md:w-[240px] lg:w-[380px] h-auto max-w-[85vw] max-h-[40vh]">
-                    <Image
-                      src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
-                      alt="Logo"
-                      width={500}
-                      height={400}
-                      priority={index === 0}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                )}
+                         <div
+              ref={index === 0 ? logoRef : undefined}
+              className="absolute z-20 top-1/2 -translate-y-1/2 left-0 flex flex-col items-start"
+            >
+              {index !== 1 && index !== 2 && (
+                <Image
+                  src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+                  alt="Logo"
+                  width={0}
+                  height={0}
+                  priority={index === 0}
+className="object-contain w-[100px] h-[85px] min-[375px]:w-[120px] min-[375px]:h-[100px] min-[430px]:w-[135px] min-[430px]:h-[115px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"                />
+              )}
 
-                {(index === 1 || index === 2) && (
-                  <div className="flex flex-col items-start gap-3 lg:left-10 lg:relative">
-                    <h2
-                      ref={index === 1 ? titleRef : undefined}
-                      className="text-white text-start font-agency font-light uppercase leading-snug tracking-wide text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:text-nowrap"
-                      style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.6)" }}
-                    >
-                      Over 15 Years of<br />
-                      Proven Security<br />
-                      Expertise
-                    </h2>
-                    <Link
-                      href="/about"
-                      className="font-agency text-base sm:text-lg px-4 bg-[#E9A07D] py-1.5 rounded-full uppercase tracking-widest transition-all duration-300 hover:bg-[#E9A07D]/90 hover:text-white"
-                      style={{ color: "#1a1a1a", letterSpacing: "0.1em" }}
-                    >
-                      Read More
-                    </Link>
-                  </div>
-                )}
-              </div>
+              {(index === 1 || index === 2) && (
+                <div className="flex flex-col items-start gap-3 pl-5 sm:pl-8 md:pl-10 lg:pl-12 lg:left-10 lg:relative">
+                  <h2
+                    ref={index === 1 ? titleRef : undefined}
+                    className="text-white text-start font-agency font-light uppercase leading-snug tracking-wide text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:text-nowrap"
+                    style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.6)" }}
+                  >
+                    Over 15 Years of<br />
+                    Proven Security<br />
+                    Expertise
+                  </h2>
+                  <Link
+                    href="/about"
+                    className="font-agency text-base sm:text-lg px-4 bg-[#E9A07D] py-1.5 rounded-full uppercase tracking-widest transition-all duration-300 hover:bg-[#E9A07D]/90 hover:text-white"
+                    style={{ color: "#1a1a1a", letterSpacing: "0.1em" }}
+                  >
+                    Read More
+                  </Link>
+                </div>
+              )}
+            </div>
             </div>
           );
         })}
