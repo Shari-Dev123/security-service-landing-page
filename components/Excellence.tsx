@@ -98,8 +98,9 @@ export const Excellence = () => {
       This ensures it applies evenly to the entire background space. */}
       <div
         className="absolute inset-0 opacity-50 bg-no-repeat z-0 bg-left
-             bg-[length:40%] 
-             max-md:bg-[length:60%]"
+             bg-[length:45%] 
+             max-md:bg-[length:60%] h-full"
+             
         style={{ backgroundImage: "url('/assets/new/excellence-bg.svg')" }} />
 
       {/* 3. THE CONTENT WRAPPER: Everything inside here will be ON TOP of the bg and overlay */}
@@ -108,12 +109,12 @@ export const Excellence = () => {
         className="relative z-10 max-w-7xl mx-auto"
       >
         {/* Section Header - Now it will look identical to the grid below it */}
-        <h2 className="font-agency w-full font-extralight text-[32px] sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
+        <h2 className="font-agency font-bold w-full text-[32px] sm:text-5xl lg:text-7xl leading-[138%] text-[#151E33] text-center mb-24 tracking-tight uppercase ">
           Our Commitment to Excellence
         </h2>
 
 
-        <div className="grid lg:grid-cols-3 gap-10 w-full lg:gap-14">
+        <div className="grid lg:grid-cols-3 gap-4 w-full lg:gap-4">
           {/* Left Side: Text Container */}
           <div className="lg:col-span-2 space-y-18">
             {features.map((feature) => (

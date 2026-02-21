@@ -179,9 +179,11 @@ const images = isMobile ? heroImagesMobile : heroImages;
               </div>
 
               {/* Logo / Content overlay — vertically centered, left-aligned with refined padding and sizing */}
-              <div
+<div
   ref={index === 0 ? logoRef : undefined}
-  className={`absolute z-20 top-1/2 -translate-y-1/2 ${(index === 1 || index === 2) ? 'left-0' : 'left-5 md:left-10 lg:left-20'}  flex flex-col items-start max-w-[55%] sm:max-w-[60%] lg:max-w-none`}
+  className={`absolute z-20 top-1/2 -translate-y-1/2 flex flex-col items-start ${
+    (index === 1 || index === 2) ? 'left-0' : 'left-5 md:left-10 lg:left-20'
+  }`}
 >
   {index !== 1 && index !== 2 && (
     <Image
@@ -190,7 +192,14 @@ const images = isMobile ? heroImagesMobile : heroImages;
       width={0}
       height={0}
       priority={index === 0}
-      className="object-contain object-left w-[100px] h-[85px] min-[375px]:w-[120px] min-[375px]:h-[100px] min-[430px]:w-[135px] min-[430px]:h-[115px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"
+      className="object-contain object-left 
+        w-[90px] h-[76px] 
+        min-[375px]:w-[110px] min-[375px]:h-[93px] 
+        min-[430px]:w-[125px] min-[430px]:h-[106px] 
+        sm:w-[210px] sm:h-[170px] 
+        md:w-[260px] md:h-[210px] 
+        lg:w-[500px] lg:h-[50vh]
+        max-w-[calc(50vw-20px)]"
     />
   )}
 

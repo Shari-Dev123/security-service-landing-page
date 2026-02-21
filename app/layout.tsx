@@ -10,11 +10,20 @@ const montserrat = Montserrat({
 });
 
 const agency = localFont({
-  src: "./fonts/agency-fb-webfont/AGENCYB.woff",
-  weight: "400",
-  variable: "--font-agency",
-  fallback: ["sans-serif"],
-  adjustFontFallback: "Arial",
+  src: [
+    {
+      path: './fonts/agency-regular.ttf', 
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/agency-bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-agency',
+  fallback: ['sans-serif'],
 });
 
 export const metadata: Metadata = {
