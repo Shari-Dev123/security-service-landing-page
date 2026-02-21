@@ -23,20 +23,60 @@ const heroImages = [
   "/assets/about-us.jpg",
   "/assets/excellence.jpg",
 ];
+// const heroImages = [
+//   "/assets/hero-bg.jpg",
+//   "/assets/new/hero-image-2.jpg",
+//   "/assets/new/hero-image-4.jpg",
+//   "/assets/new/hero-bg-7.jpeg",
+//   "/assets/new/hero-bg-66.png",
+//   "/assets/new/hero-bg-5.jpeg",
+//   "/assets/new/hero-bg-9.png",
+//   "/assets/security-guard-workspace.jpg",
+//   "/assets/new/hero-bg-10.jpeg",
+//   "/assets/about-us.jpg",
+//   "/assets/excellence.jpg",
+// ];
+
+const heroImagesMobile = [
+  // "/assets/hero-bg.jpg",
+  // "/assets/new/hero-image-2.jpg",
+  "/assets/new/security.jpg",
+  "/assets/new/security-cam.jpg",
+  "/assets/new/security-dog.jpg",
+  "/assets/new/security-person.jpg",
+  "/assets/new/hero-bg-7.jpeg",
+  "/assets/new/hero-bg-66.png",
+  "/assets/new/hero-bg-5.jpeg",
+  // "/assets/new/hero-bg-9.png",
+  "/assets/security-guard-workspace.jpg",
+  "/assets/new/hero-bg-10.jpeg",
+  // "/assets/about-us.jpg",
+  "/assets/excellence.jpg",
+];
 
 export const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const check = () => setIsMobile(window.innerWidth < 1024);
+  check();
+  window.addEventListener("resize", check);
+  return () => window.removeEventListener("resize", check);
+}, []);
+
+const images = isMobile ? heroImagesMobile : heroImages;
 
   // Auto-change background images
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -69,18 +109,31 @@ export const Hero = () => {
   return (
     <div className="w-full h-[100svh] bg-[#EED7C8]/45  pt-18 lg:h-[120vh] bg-cover">
       <section
-        id="home"
-        ref={heroRef}
-        className="relative  z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden [clip-path:polygon(0%_0%,44.5%_0%,50%_0.0%,59.5%_0%,100%_0%,100%_90%,55.5%_90%,50%_97.5%,44.5%_90%,0%_90%)]"
-      >
+  id="home"
+  ref={heroRef}
+  className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden"
+  style={{
+    clipPath: `polygon(
+      0% 0%,
+      100% 0%,
+      100% calc(100% - 60px),
+      calc(50% + 80px) calc(100% - 60px),
+      50% 100%,
+      calc(50% - 80px) calc(100% - 60px),
+      0% calc(100% - 60px)
+    )`
+  }}
+>
         {/* Background Images with Fade Transition */}
-        {heroImages.map((img, index) => {
+        {images.map((img, index) => {
           // Optimization: Only render current, previous, and next images to keep memory low and prevent all images loading at once
           const isCurrent = currentImageIndex === index;
           const isNext = (currentImageIndex + 1) % heroImages.length === index;
           const isPrev = (currentImageIndex - 1 + heroImages.length) % heroImages.length === index;
 
           if (!isCurrent && !isNext && !isPrev) return null;
+            if (!img) return null;
+          
 
           return (
             <div
@@ -164,7 +217,7 @@ className="object-contain w-[100px] h-[85px] min-[375px]:w-[120px] min-[375px]:h
 
         {/* Dot indicators — visible on mobile/tablet only */}
         <div className="absolute lg:bottom-24 bottom-20 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
-          {heroImages.map((_, i) => (
+          {images.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentImageIndex(i)}
