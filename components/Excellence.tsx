@@ -114,9 +114,9 @@ export const Excellence = () => {
         </h2>
 
 
-        <div className="grid lg:grid-cols-3 gap-4 w-full lg:gap-4">
+        <div className="grid lg:grid-cols-7 gap-4 w-full lg:gap-6">
           {/* Left Side: Text Container */}
-          <div className="lg:col-span-2 space-y-18">
+          <div className="lg:col-span-4 space-y-18">
             {features.map((feature) => (
           /* Change opacity-0 to opacity-100 to test if they appear */
           <div key={feature.title} className="feature-item opacity-100">
@@ -131,7 +131,7 @@ export const Excellence = () => {
           </div>
 
           {/* Right Side: Image */}
-           <div className="lg:col-span-1 hidden lg:block">
+           <div className="lg:col-span-3 hidden lg:block">
           <div 
             ref={imageRef} 
             className="relative w-full h-full border-[12px] border-white shadow-2xl opacity-0"

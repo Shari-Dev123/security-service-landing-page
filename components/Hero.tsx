@@ -22,7 +22,7 @@ const heroImages = [
   // "/assets/service-6.jpg",
   // "/assets/new/hero-bg-10.jpeg",
   "/assets/about-us.jpg",
-  "/assets/excellence.jpg",
+  "/assets/new/security-person-2.jpg",
 ];
 // const heroImages = [
 //   "/assets/hero-bg.jpg",
