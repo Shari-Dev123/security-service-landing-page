@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const heroImages = [
   "/assets/hero-bg.jpg",
   "/assets/new/hero-image-2.jpg",
+  "/assets/new/hero-image-4.jpg",
   "/assets/new/hero-bg-7.jpeg",
   "/assets/new/hero-bg-66.png",
   "/assets/new/hero-bg-5.jpeg",
@@ -66,7 +67,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full h-[100svh] pt-18 lg:h-[120vh] bg-contain">
+    <div className="w-full h-[100svh] bg-[#EED7C8]/45  pt-18 lg:h-[120vh] bg-cover">
       <section
         id="home"
         ref={heroRef}
@@ -98,7 +99,7 @@ export const Hero = () => {
                   alt={`Slide ${index + 1}`}
                   fill
                   priority={index === 0}
-                  className="object-contain"
+                  className="max-lg:object-cover"
                   sizes="100vw"
                   quality={75}
                 />

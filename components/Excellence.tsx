@@ -117,16 +117,16 @@ export const Excellence = () => {
           {/* Left Side: Text Container */}
           <div className="lg:col-span-2 space-y-12">
             {features.map((feature) => (
-              /* Change opacity-0 to opacity-100 to test if they appear */
-              <div key={feature.title} className="feature-item">
-                <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
-                  {feature.title}
-                </h3>
-                <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+          /* Change opacity-0 to opacity-100 to test if they appear */
+          <div key={feature.title} className="feature-item opacity-100">
+            <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
+              {feature.title}
+            </h3>
+            <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
+              {feature.description}
+            </p>
+          </div>
+        ))}
           </div>
 
           {/* Right Side: Image */}
