@@ -182,26 +182,43 @@ const images = isMobile ? heroImagesMobile : heroImages;
 <div
   ref={index === 0 ? logoRef : undefined}
   className={`absolute z-20 top-1/2 -translate-y-1/2 flex flex-col items-start ${
-    (index === 1 || index === 2) ? 'left-0' : 'left-5 md:left-10 lg:left-20'
+    (index === 1 || index === 2) ? 'left-0' : 'left-5 md:left-10 lg:left-0'
   }`}
 >
-  {index !== 1 && index !== 2 && (
+{index !== 1 && index !== 2 && (
+  <div className="flex flex-col items-center gap-0">
+    {/* Logo graphic — centered above text */}
     <Image
-      src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+      src="/assets/new/logo-1.svg"
       alt="Logo"
       width={0}
       height={0}
       priority={index === 0}
-      className="object-contain object-left 
-        w-[90px] h-[76px] 
-        min-[375px]:w-[110px] min-[375px]:h-[93px] 
-        min-[430px]:w-[125px] min-[430px]:h-[106px] 
-        sm:w-[210px] sm:h-[170px] 
-        md:w-[260px] md:h-[210px] 
-        lg:w-[500px] lg:h-[50vh]
+      className="object-contain
+        w-[90px] h-[65px] 
+        min-[375px]:w-[110px] min-[375px]:h-[80px] 
+        min-[430px]:w-[125px] min-[430px]:h-[90px] 
+        sm:w-[210px] sm:h-[150px] 
+        md:w-[260px] md:h-[185px] 
+        lg:w-[500px] lg:h-[40vh]
         max-w-[calc(50vw-20px)]"
     />
-  )}
+
+    {/* Text lines — centered to match image */}
+    <div className="flex flex-col items-center leading-none -mt-1 sm:-mt-2">
+      <span className="text-white uppercase font-agency tracking-wide
+        text-[13px] min-[375px]:text-[15px] min-[430px]:text-[17px]
+        sm:text-[28px] md:text-[34px] lg:text-[52px]">
+        Secure Services
+      </span>
+      <span className="text-white uppercase font-agency tracking-[0.12em]
+        text-[6px] min-[375px]:text-[7px] min-[430px]:text-[8px]
+        sm:text-[13px] md:text-[16px] lg:text-[24px]">
+        Your Safety — Our Priority
+      </span>
+    </div>
+  </div>
+)}
 
               {(index === 1 || index === 2) && (
                 <div className="flex flex-col items-start gap-3 pl-5 sm:pl-8 md:pl-10 lg:pl-12 lg:left-10 lg:relative">
