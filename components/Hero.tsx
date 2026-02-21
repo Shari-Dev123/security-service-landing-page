@@ -16,6 +16,7 @@ const heroImages = [
   "/assets/new/hero-bg-66.png",
   "/assets/new/hero-bg-5.jpeg",
   "/assets/new/hero-bg-9.png",
+  "/assets/new/security-construction.jpeg",
   // "/assets/new/hero-image-88.jpg",
   "/assets/security-guard-workspace.jpg",
   // "/assets/service-6.jpg",

@@ -66,7 +66,7 @@ const servicesData: Service[] = [
         id: '06',
         title: 'CCTV CAMERAS',
         description: 'OUR PROFESSIONAL CCTV SECURITY CAMERA SERVICES PROVIDE 24/7 SURVEILLANCE AND EFFECTIVE CRIME DETERRENCE FOR BUSINESSES AND COMMERCIAL PROPERTIES ACROSS SHEFFIELD AND THE UK',
-        imageUrl: '/assets/service-6.jpg',
+        imageUrl: '/assets/new/cctv-camera-front-building-BIG.jpeg',
         ctaText: 'Go Cloud',
         ctaLink: '/services/cloud',
     },
