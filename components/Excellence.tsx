@@ -92,13 +92,13 @@ export const Excellence = () => {
     <section
       id="services"
       /* 1. Ensure the section is the 'anchor' for everything */
-      className="relative min-h-screen border-b-3 border-white bg-[#EED7C8]/45 w-full overflow-hidden bg-cover bg-center bg-no-repeat  py-32 lg:py-20 px-8 sm:px-16 lg:px-20"
+      className="relative min-h-screen border-b-3 border-white bg-[#EED7C8]/45 w-full overflow-hidden bg-cover bg-center bg-no-repeat  py-32 lg:py-20 px-8 sm:px-16 lg:px-16"
     >
       {/* 2. THE OVERLAY: This is now a sibling to the content, not a parent. 
       This ensures it applies evenly to the entire background space. */}
       <div
         className="absolute inset-0 opacity-50 bg-no-repeat z-0 bg-left
-             bg-[length:30%] 
+             bg-[length:40%] 
              max-md:bg-[length:60%]"
         style={{ backgroundImage: "url('/assets/new/excellence-bg.svg')" }} />
 
@@ -108,14 +108,14 @@ export const Excellence = () => {
         className="relative z-10 max-w-7xl mx-auto"
       >
         {/* Section Header - Now it will look identical to the grid below it */}
-        <h2 className="font-agency w-full font-extralight text-3xl sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
+        <h2 className="font-agency w-full font-extralight text-[32px] sm:text-5xl lg:text-7xl text-[#151E33] text-center mb-24 tracking-tight uppercase leading-none">
           Our Commitment to Excellence
         </h2>
 
 
-        <div className="grid lg:grid-cols-3 gap-10 w-full lg:gap-20 items-stretch">
+        <div className="grid lg:grid-cols-3 gap-10 w-full lg:gap-14">
           {/* Left Side: Text Container */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="lg:col-span-2 space-y-18">
             {features.map((feature) => (
           /* Change opacity-0 to opacity-100 to test if they appear */
           <div key={feature.title} className="feature-item opacity-100">
@@ -130,13 +130,32 @@ export const Excellence = () => {
           </div>
 
           {/* Right Side: Image */}
-          <div className="lg:col-span-1 hidden lg:block">
-            <div className="relative w-full h-full min-h-[400px] border-[12px] border-white shadow-2xl">
-              <Image src="/assets/excellence.jpg" alt="Security" fill className="object-cover" priority />
-            </div>
+           <div className="lg:col-span-1 hidden lg:block">
+          <div 
+            ref={imageRef} 
+            className="relative w-full h-full border-[12px] border-white shadow-2xl opacity-0"
+          >
+            <Image
+              src="/assets/excellence.jpg"
+              alt="Security Guard"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
+
+        {/* Mobile Image: Balanced Aspect Ratio */}
+        {/* <div className="lg:hidden relative w-full aspect-[4/5] border-[8px] mt-10 mb-5 border-white shadow-lg">
+          <Image
+            src="/assets/excellence.jpg"
+            alt="Security Guard"
+            fill
+            className="object-cover"
+          />
+        </div> */}
       </div>
+        </div>
     </section>
   );
 };

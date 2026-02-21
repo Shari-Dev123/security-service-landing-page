@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const heroImages = [
   "/assets/hero-bg.jpg",
   "/assets/new/hero-image-2.jpg",
-  "/assets/new/hero-image-4.jpg",
+  // "/assets/new/hero-image-4.jpg",
   "/assets/new/hero-bg-7.jpeg",
   "/assets/new/hero-bg-66.png",
   "/assets/new/hero-bg-5.jpeg",
@@ -19,7 +19,7 @@ const heroImages = [
   // "/assets/new/hero-image-88.jpg",
   "/assets/security-guard-workspace.jpg",
   // "/assets/service-6.jpg",
-  "/assets/new/hero-bg-10.jpeg",
+  // "/assets/new/hero-bg-10.jpeg",
   "/assets/about-us.jpg",
   "/assets/excellence.jpg",
 ];
@@ -176,19 +176,20 @@ const images = isMobile ? heroImagesMobile : heroImages;
               </div>
 
               {/* Logo / Content overlay — vertically centered, left-aligned with refined padding and sizing */}
-                         <div
-              ref={index === 0 ? logoRef : undefined}
-              className="absolute z-20 top-1/2 -translate-y-1/2 left-0 flex flex-col items-start"
-            >
-              {index !== 1 && index !== 2 && (
-                <Image
-                  src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
-                  alt="Logo"
-                  width={0}
-                  height={0}
-                  priority={index === 0}
-className="object-contain w-[100px] h-[85px] min-[375px]:w-[120px] min-[375px]:h-[100px] min-[430px]:w-[135px] min-[430px]:h-[115px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"                />
-              )}
+              <div
+  ref={index === 0 ? logoRef : undefined}
+  className="absolute z-20 top-1/2 -translate-y-1/2 left-0  flex flex-col items-start max-w-[55%] sm:max-w-[60%] lg:max-w-none"
+>
+  {index !== 1 && index !== 2 && (
+    <Image
+      src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+      alt="Logo"
+      width={0}
+      height={0}
+      priority={index === 0}
+      className="object-contain lg:pl-20 pl-5 object-left w-[100px] h-[85px] min-[375px]:w-[120px] min-[375px]:h-[100px] min-[430px]:w-[135px] min-[430px]:h-[115px] sm:w-[210px] sm:h-[170px] md:w-[260px] md:h-[210px] lg:w-[500px] lg:h-[50vh]"
+    />
+  )}
 
               {(index === 1 || index === 2) && (
                 <div className="flex flex-col items-start gap-3 pl-5 sm:pl-8 md:pl-10 lg:pl-12 lg:left-10 lg:relative">
