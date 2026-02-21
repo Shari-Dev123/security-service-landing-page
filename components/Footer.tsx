@@ -19,15 +19,17 @@ export const Footer = ({ home, services, about }: FooterProps) => {
 
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-center text-center lg:text-left">
 
-          <div className="flex flex-col items-center lg:items-start space-y-4">
-            <Image
-              src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
-              alt="Secure Services Logo"
-              width={500}
-              height={500}
-              className="w-auto h-auto max-w-[130px] max-h-[130px] sm:max-w-[160px] sm:max-h-[160px] lg:max-w-[224px] lg:max-h-[224px] object-contain"
-            />
-          </div>
+          <div className="flex flex-col items-center lg:items-start space-y-4 overflow-visible">
+  <div className="overflow-visible flex items-center justify-center lg:justify-start">
+    <Image
+      src="/assets/new/Secure-services-logo-Artboard-5-cropped.svg"
+      alt="Secure Services Logo"
+      width={500}
+      height={500}
+      className="w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] lg:w-[224px] lg:h-[224px] object-contain flex-shrink-0"
+    />
+  </div>
+</div>
 
           <div className="flex flex-col items-center space-y-6">
             <div className="text-center">
@@ -76,11 +78,6 @@ export const Footer = ({ home, services, about }: FooterProps) => {
           </div>
         </div>
 
-        {/* <div className="relative mt-20 pt-8  text-center">
-        <p className="font-montserrat text-[10px] text-white/40 tracking-widest uppercase">
-          © 2026 Secure Services Ltd. All Rights Reserved.
-        </p>
-      </div> */}
       </footer>
     </div>
   );
