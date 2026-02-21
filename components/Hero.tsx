@@ -111,7 +111,7 @@ const images = isMobile ? heroImagesMobile : heroImages;
       <section
   id="home"
   ref={heroRef}
-  className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-hidden"
+  className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-y-hidden"
   style={{
     clipPath: `polygon(
       0% 0%,
