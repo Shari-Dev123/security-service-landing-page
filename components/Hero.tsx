@@ -107,32 +107,35 @@ const images = isMobile ? heroImagesMobile : heroImages;
   }, []);
 
   return (
-    <div className="w-full h-[100svh] bg-[#EED7C8]/45  pt-18 lg:h-[120vh] bg-cover">
-      <section
-  id="home"
-  ref={heroRef}
-  className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center px-5 overflow-y-hidden"
-  style={{
-    clipPath: `polygon(
-      0% 0%,
-      100% 0%,
-      100% calc(100% - 60px),
-      calc(50% + 80px) calc(100% - 60px),
-      50% 100%,
-      calc(50% - 80px) calc(100% - 60px),
-      0% calc(100% - 60px)
-    )`
-  }}
->
-        {/* Background Images with Fade Transition */}
-        {images.map((img, index) => {
-          // Optimization: Only render current, previous, and next images to keep memory low and prevent all images loading at once
-          const isCurrent = currentImageIndex === index;
-          const isNext = (currentImageIndex + 1) % heroImages.length === index;
-          const isPrev = (currentImageIndex - 1 + heroImages.length) % heroImages.length === index;
+<div className="w-full h-[100svh] bg-[#EED7C8]/45  pt-18 lg:h-[120vh] bg-cover">
+  {/* clip-path wrapper — does NOT have overflow-hidden */}
+  <div
+    className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full"
+    style={{
+      clipPath: `polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 60px),
+        calc(50% + 80px) calc(100% - 60px),
+        50% 100%,
+        calc(50% - 80px) calc(100% - 60px),
+        0% calc(100% - 60px)
+      )`
+    }}
+  >
+    <section
+      id="home"
+      ref={heroRef}
+      className="relative z-100 h-[100svh] lg:h-[120vh] min-h-[500px] w-full flex flex-col items-center justify-center text-center"
+    >
+      {/* Background Images with Fade Transition */}
+      {images.map((img, index) => {
+        const isCurrent = currentImageIndex === index;
+        const isNext = (currentImageIndex + 1) % images.length === index; // fixed bug
+        const isPrev = (currentImageIndex - 1 + images.length) % images.length === index; // fixed bug
 
-          if (!isCurrent && !isNext && !isPrev) return null;
-            if (!img) return null;
+        if (!isCurrent && !isNext && !isPrev) return null;
+        if (!img) return null;
           
 
           return (
@@ -217,19 +220,20 @@ const images = isMobile ? heroImagesMobile : heroImages;
         })}
 
         {/* Dot indicators — visible on mobile/tablet only */}
-        <div className="absolute lg:bottom-24 bottom-20 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentImageIndex(i)}
-              className={`rounded-full transition-all duration-300 ${i === currentImageIndex
-                ? "w-4 h-2 bg-[#E9A07D]"
-                : "w-2 h-2 bg-white/40"
-                }`}
-            />
-          ))}
-        </div>
-      </section>
-    </div>
+        {/* Dot indicators */}
+      <div className="absolute lg:bottom-24 bottom-20 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-1.5 z-30">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrentImageIndex(i)}
+            className={`rounded-full transition-all duration-300 ${
+              i === currentImageIndex ? "w-4 h-2 bg-[#E9A07D]" : "w-2 h-2 bg-white/40"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
+</div>
   );
 };
