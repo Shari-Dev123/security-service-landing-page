@@ -114,7 +114,7 @@ export const Excellence = () => {
         </h2>
 
 
-        <div className="grid lg:grid-cols-7 gap-4 w-full lg:gap-6">
+        <div className="grid lg:grid-cols-7 gap-4 w-full lg:gap-6 xl:px-20">
           {/* Left Side: Text Container */}
           <div className="lg:col-span-4 space-y-18">
             {features.map((feature) => (
@@ -123,7 +123,7 @@ export const Excellence = () => {
             <h3 className="font-agency text-2xl sm:text-4xl text-[#151E33] mb-3 font-bold uppercase">
               {feature.title}
             </h3>
-            <p className="font-montserrat text-[#151E33]/80 text-lg font-medium">
+            <p className="font-montserrat text-[#151E33]/80 text-[24px] font-medium">
               {feature.description}
             </p>
           </div>
