@@ -129,7 +129,7 @@ export const Testimonials = () => {
         style={{
           backgroundImage: "url('/assets/removed-cut.svg')",
         }}
-        className="z-60 pb-24 py-32 pb-40 px-6 relative bg-cover bg-center overflow-visible border-t-2 border-b-0 border-white"
+        className="z-60 pb-24 py-32 pb-40 px-6 relative bg-cover bg-center overflow-visible border-b-0 border-white"
       >
         <div className="max-w-7xl max-lg:my-10 mx-auto">
           <h2 className="font-agency lg:px-30 text-5xl md:text-7xl text-white mb-20 tracking-tight uppercase">

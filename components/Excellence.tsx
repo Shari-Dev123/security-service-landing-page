@@ -90,9 +90,8 @@ export const Excellence = () => {
 
   return (
     <section
-      id="services"
       /* 1. Ensure the section is the 'anchor' for everything */
-      className="relative min-h-screen border-b-3 border-white bg-[#EED7C8]/45 w-full overflow-hidden bg-cover bg-center bg-no-repeat  py-32 lg:py-20 px-8 sm:px-16 lg:px-16"
+      className="relative min-h-screen  border-white border-b-4 bg-[#EED7C8]/45 w-full overflow-hidden bg-cover bg-center bg-no-repeat  py-32 lg:py-20 px-8 sm:px-16 lg:px-16"
     >
       {/* 2. THE OVERLAY: This is now a sibling to the content, not a parent. 
       This ensures it applies evenly to the entire background space. */}
