@@ -21,9 +21,9 @@
 import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // you already have this
+  output: 'export',      // ye batata hai Next.js ko: "Static HTML aur assets generate karo"
   images: {
-    unoptimized: true, // add this line
+    unoptimized: true,   // ye disable karta hai Next.js image optimization API ko
   },
 };
 
