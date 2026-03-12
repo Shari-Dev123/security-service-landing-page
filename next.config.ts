@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,   // ye disable karta hai Next.js image optimization API ko
   },
+  basePath: '',          // agar subfolder me host kar rahe ho
+  assetPrefix: './',     // ye relative path ke liye
 };
-
 export default nextConfig;
